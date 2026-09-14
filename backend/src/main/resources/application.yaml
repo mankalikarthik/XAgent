@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: xagent
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/xagent
+    username: xagent
+    password: xagent_dev
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    locations: classpath:db/migration
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - info
+
+xagent:
+  ai:
+    base-url: ${XAGENT_AI_BASE_URL:http://localhost:11434}
+    model: ${XAGENT_AI_MODEL:xagent-qwen}

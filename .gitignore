@@ -1,0 +1,44 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Maven
+**/target/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Local environment/secrets
+.env
+.env.*
+!.env.example
+
+# PostgreSQL local database
+data/postgres/
+data/postgres/**
+
+# Redis/local caches
+data/redis/
+data/cache/
+data/tmp/
+
+# Local AI models
+models/**/*.gguf
+models/llama-cache/
+models/**/blobs/
+
+# Python / QLoRA
+training/.venv/
+training/__pycache__/
+training/checkpoints/
+training/output/
+training/adapters/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

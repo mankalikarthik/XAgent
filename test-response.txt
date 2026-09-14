@@ -1,0 +1,1 @@
+Java virtual threads: Finally, `thread` sounds like "thread" again without needing 100 lines of boilerplate. Welcome to the era where your code writes itself! âð§µ

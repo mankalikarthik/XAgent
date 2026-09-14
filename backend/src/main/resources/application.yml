@@ -1,0 +1,27 @@
+﻿spring:
+  application:
+    name: xagent
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/xagent
+    username: xagent
+    password: xagent_dev
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+  flyway:
+    enabled: true
+
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - health
+          - info
